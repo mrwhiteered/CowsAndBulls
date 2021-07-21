@@ -113,7 +113,7 @@ ul_bulls.append(li);  */
 Вызов функций результата и количества попыток */
 showCount({
     
-    html: 'Попытки ' + count,
+    html: count,
     className: "welcome"
   });
   showResult({

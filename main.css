@@ -1,5 +1,35 @@
+/*     Обнуление параметров браузеров */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* 
+  Фон и главные настройки */
+
 .main{
-    margin: 0 auto;
+    margin: 5px auto;
     max-width: 1200px;
     padding: 0 15px;
 
@@ -10,6 +40,14 @@ background-size: cover;
 background-attachment: fixed;
 background-position: top;
 }
+#glavnoe{
+    text-align: center;
+    margin-top: 80px;
+   
+
+}
+
+/*  Название игры */
 .title{
     padding: 1%;
     color:rgba();
@@ -17,7 +55,9 @@ background-position: top;
     text-align: center;
     background: linear-gradient(90deg,rgb(49, 121, 79),rgb(168, 168, 168));
     border-radius: 5px;
+    font-size: 30px;
 }
+/*  ПРАВИЛА ИГРЫ */
 #ruls{
     float:right;
     border: 1px solid rgba(139, 39, 39, 0.562);
@@ -25,11 +65,16 @@ background-position: top;
     background-color: rgb(168, 168, 168);
     border-radius: 5px;
     color: black;
+    margin-top: 15px;
+    font-size: 20px;
     
 }
+
+/*КНОПКА НАЧАТЬ ВВЕСТИ ЗНАЧЕНИЕ */
 .game {
     text-align: center;
     display: flex;
+    position: fixed;
     justify-content: center;
     height: 50px;
     line-height: 50px;
@@ -39,37 +84,48 @@ background-position: top;
   
     margin-top: 50px;
 }
-#button{
-    background: rgb(39, 243, 124);
-    color: black;
-    font-size: 20px;
-    border-radius: 5px;
-}
-.result{
-    color:blue;
-    list-style-type: none;
-    position:absolute;
-    left:50%;
-    transform: translateX(-50%);
-    
-}
-@media (min-width:800px) {
-.notification {
-    position: fixed;
-    top:200px;
-    right:0px;
-    z-index: 1000;
-    padding: 5px;
-    margin: 0 15px;
-    border: 1px solid rgba(139, 39, 39, 0.562);
-    font-size: 20px;
-    background: white;
-    text-align: center;
-  }}
+
+
+
+
+  @media (min-width:800px) {
+    #button{
+        background: rgb(39, 243, 124);
+        color: black;
+        font-size: 20px;
+        border-radius: 5px;
+    }}
+  @media (max-width:799px) {
+    #button{
+        background: rgb(39, 243, 124);
+        color: black;
+        font-size: 20px;
+        border-radius: 5px;
+       
+       margin: 0 auto;
+       padding: 20px;
+       margin-top: 20px;
+       padding-bottom: 40px;
+    }}
+
+/* КОЛИЧЕСТВО ПОПЫТОК */
+    @media (min-width:800px) {
+        .notification {
+            position: fixed;
+            top:200px;
+            right:0px;
+            z-index: 1000;
+            padding: 5px;
+            margin: 0 15px;
+            border: 1px solid rgba(139, 39, 39, 0.562);
+            font-size: 20px;
+            background: white;
+            text-align: center;
+          }}
   @media (max-width:799px) {
     .notification {
         position: fixed;
-        top:150px;
+        top:195px;
         right:0px;
         z-index: 1000;
         padding: 5px;
@@ -86,8 +142,20 @@ background-position: top;
     color: black;
     border-radius: 5px;
   }
+
+
+/* ВЫВОД РЕЗУЛЬТАТОВ */
+  .result{
+    color:blue;
+    list-style-type: none;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    
+}
   @media (max-width:767px){
       .answer{
+          
         color:black;
         float:none;
         margin: 0 auto;
@@ -96,7 +164,7 @@ background-position: top;
          padding:0 2px;
          background:linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
          font-size:20px;
-         border: 1px solid rgb(80, 255, 118);
+         border: 1px solid rgb(255, 0, 0);
       }
   }
   @media (min-width:768px){
@@ -112,17 +180,16 @@ background-position: top;
   }
       
   }
-  #glavnoe{
-      text-align: center;
-      margin-top: 80px;
-     
+  
 
-  }
+  /* КНОПКА НАЧАТЬ ЗАНОВО */
   .reset {
       border: 1px solid black;
       color: black;
       background-color:rgb(49, 121, 79) ;
       font-size: 20px;
       padding: 10px;
+      margin-top:15px ;
       border-radius: 5px;
+      display: inline-flex;
   }

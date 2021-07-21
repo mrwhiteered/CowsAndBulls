@@ -1,6 +1,7 @@
 .main{
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1200px;
+    padding: 0 15px;
 
     background-image: linear-gradient(rgba(255,255,255,0.8)
     ,rgba(0,0,0,0.5)),url('img/cows_bulls.png') ;
@@ -56,9 +57,10 @@ background-position: top;
 .notification {
     position: fixed;
     top:200px;
-    right:230px;
+    right:0px;
     z-index: 1000;
     padding: 5px;
+    margin: 0 15px;
     border: 1px solid rgba(139, 39, 39, 0.562);
     font-size: 20px;
     background: white;
@@ -67,10 +69,11 @@ background-position: top;
   @media (max-width:799px) {
     .notification {
         position: fixed;
-        top:200px;
+        top:150px;
         right:0px;
         z-index: 1000;
         padding: 5px;
+        margin: 0 15px;
         border: 1px solid rgba(139, 39, 39, 0.562);
         font-size: 20px;
         background: white;
@@ -83,6 +86,20 @@ background-position: top;
     color: black;
     border-radius: 5px;
   }
+  @media (max-width:767px){
+      .answer{
+        color:black;
+        float:none;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        margin-top: 5px;
+         padding:0 2px;
+         background:linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
+         font-size:20px;
+         border: 1px solid rgb(80, 255, 118);
+      }
+  }
+  @media (min-width:768px){
   .answer{
       color:black;
      float:none;
@@ -92,10 +109,12 @@ background-position: top;
       background:linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
       font-size:20px;
       border: 1px solid rgb(80, 255, 118);
+  }
       
   }
   #glavnoe{
       text-align: center;
+      margin-top: 80px;
      
 
   }

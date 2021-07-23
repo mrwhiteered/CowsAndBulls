@@ -1,5 +1,7 @@
 
-                "use strict";
+               "use strict";
+
+
                /* Функция для рандомного целого числа от мин до макс */
                 function randomInteger(min, max) {
                   
@@ -53,7 +55,8 @@
  let mass = Array.from(Value);
  /* alert(mass[0]); */
 if (mass[0]==mass[1] || mass[0] == mass[2] || mass[0]==mass[3] || mass[1]==mass[2] || mass[2] == mass[3])
-{alert ('Так вводить число нельзя. Все цифры должны быть разными');
+{
+  alert ('Так вводить число нельзя. Все цифры должны быть разными');
 count--;
 }
 else {
@@ -101,7 +104,7 @@ if (Value.length !=4){alert('так нельзя вводить число');
 count--;
 }
 else {
-let answer = Value +" "   + 'быков-' +bulls + " "  + ' коров-' +cows ;
+let answer = +Value +" "   + 'быков-' +bulls + " "  + ' коров-' +cows ;
 
 
 /* let li = document.createElement('li');
@@ -111,11 +114,11 @@ ul_bulls.append(li);  */
 
 /* 
 Вызов функций результата и количества попыток */
-showCount({
+/* showCount({
     
     html: count,
     className: "welcome"
-  });
+  }); */
   showResult({
       className:'answer',
 paddingTop:100,
@@ -134,11 +137,11 @@ paddingTop:100,
     li.textContent = answer;
     ul_bulls.append(li); 
      
- }
+ };
 
  /* 
  Функция для количества опыток */
- function showCount({ className, html}) {
+ /* function showCount({ className, html}) {
 
     let notification = document.createElement('div');
     notification.className = "notification";
@@ -152,27 +155,39 @@ paddingTop:100,
     document.body.append(notification);
 
     
-  };
+  }; */
 
   
-  button.onclick = start;
+  vvodNumber.onclick = start;
+
+ 
   
  
-    let openRuls = document.getElementById('ruls');
-    let elemRuls = openRuls.querySelector('.pravila');
+    let openRuls = document.getElementById('pravilaIgri');
+    let elemRuls = openRuls.querySelector('.prIgr');
     elemRuls.onclick =  function(){
         alert ('В игре необходимо с помощью подсказок отгадать четырёхзначное число, которое загадал компьютер. Вы делаете предположение какое это может быть число. В ответ на каждое такое предположение компьютер отмечает, сколько в этой попытке отгадано быков (угаданные цифры стоят на своих местах) и сколько коров (цифры угаданны, но стоят не на своем месте). Задача как можно скорее отгадать число, число состоит из не повторяющихся цифр от 0 до 9, первая цифра числа может быть 0')
        
     };
 
-    let restartGame = document.getElementById('restart');
-    let reset = restartGame.querySelector('.reset');
+    let restartGame = document.getElementById('startAgain');
+    let reset = restartGame.querySelector('.restart');
     
     reset.onclick = function resetGame() {
         location.href=location.href;
         
     };
+
+    /* let games = document.getElementById('gameMain');
+    let mainGame = games.querySelector('.gamecenter');
+
+    mainGame.onclick = function(){
+      alert('работает');
+    }; */
     
+ 
+
+        
  
 
         

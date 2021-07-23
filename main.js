@@ -1,5 +1,5 @@
 
-               "use strict";
+              "use strict";
 
 
                /* Функция для рандомного целого числа от мин до макс */
@@ -46,7 +46,7 @@
 
  /*Ввод числа и преобразование числа в массив*/
  function start (){
- let Value = prompt("Введиет число", 1234);
+ let Value = prompt("Введиет число",1092 );
 
  count ++;
  
@@ -64,8 +64,15 @@ else {
     let bulls = 0;
     let cows =0;
 /* alert(typeof mass[3]); */
+for (let i = 0;i<mass.length;i++){
+if (a==mass[i] || b==mass[i] || c==mass[i] || d ==mass[i]) cows+=1;
+}
+if (a==mass[0]) bulls+=1 , cows-=1;
+if (b==mass[1]) bulls+=1 , cows-=1;
+if (c==mass[2]) bulls+=1 , cows-=1;
+if (d==mass[3]) bulls+=1 , cows-=1;
 
-if (a==mass[0]) bulls+=1;
+/* if (a==mass[0]) bulls+=1;
 if (a==mass[1]) cows +=1;
 if (a==mass[2]) cows +=1;
 if (a==mass[3]) cows +=1;
@@ -85,7 +92,7 @@ if (d==mass[1]) cows +=1;
 if (d==mass[2]) cows +=1;
 if (d==mass[0]) cows +=1;
 
-
+ */
 
 /* 
  alert('Быков = ' +bulls +  ' Коров = ' + cows);
@@ -94,7 +101,7 @@ if (d==mass[0]) cows +=1;
 
 /* 
  Запись на страничку  */
-if (bulls==4) {alert('Ты победил! за '+count +' попыток. ' + 'Загаданное число='+a+b+c+d)}
+if (bulls==4) {alert('Ты победил! за ' +count +' попыток. ' + 'Загаданное число= '+a+b+c+d)}
 else { 
 
 /* if (Value.length != 4) 
@@ -185,9 +192,6 @@ paddingTop:100,
       alert('работает');
     }; */
     
- 
-
-        
  
 
         

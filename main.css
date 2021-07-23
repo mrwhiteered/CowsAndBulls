@@ -1,29 +1,39 @@
-/*     Обнуление параметров браузеров */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
+*{
 	padding: 0;
+	margin: 0;
 	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
 	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /* 
   Фон и главные настройки */
@@ -45,6 +55,12 @@ background-position: top;
     margin-top: 80px;
    
 
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 15px;
 }
 
 /*  Название игры */
@@ -168,7 +184,7 @@ background-position: top;
          padding:10px 8px;
          background:linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
          font-size:20px;
-         border: 1px solid rgb(255, 0, 0);
+         border: 3px solid rgb(0, 0, 0);
       }
   }
   @media (min-width:768px){
@@ -180,7 +196,7 @@ background-position: top;
       padding: 10px;
       background:linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
       font-size:20px;
-      border: 1px solid rgb(80, 255, 118);
+      border: 1px solid rgb(0, 0, 0);
   }
       
   }
@@ -196,4 +212,82 @@ background-position: top;
       margin-top:15px ;
       border-radius: 5px;
       display: inline-flex;
+  }
+
+  .block{
+    margin-top: 10px;
+
+  }
+  .blockRow{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+
+    /* border:10px solid #ece89d; */
+    margin: 0px 0px 20px 0px;
+
+  }
+  @media (min-width:446px){
+    .blockColumn{
+      border: 10px solid rgba(34, 108, 121, 0.26);
+      flex-basis: auto;
+      text-align: center;
+      
+  
+    }
+
+  }
+  @media (max-width:445px){
+  .blockColumn{
+    border: 10px solid rgba(0, 0, 0, 0.26);
+    flex-basis: auto;
+    text-align: center;
+    flex-grow: 1;
+
+  }
+  .Ruls{
+    order:1;
+   
+
+  }
+  .Restart{
+    order:2;
+
+  }
+  .Game{
+    order:3;
+    
+
+  }
+
+}
+
+  .blockItem{
+    background: linear-gradient(90deg, rgb(49, 121, 79),rgb(168, 168, 168));
+    height: 100%;
+    padding: 15px;
+    font-size: 15px;
+    color:rgb(0, 0, 0);
+    font-weight: 700;
+
+  }
+  .blockItem.Ruls{
+   
+
+  }
+  .blockItem.Restart{
+
+  }
+  .blockItem.Game{
+    
+
+  }
+  #vvodNumber{
+    text-decoration: none;
+   font-size: 15px;
+    background:none;
+    color:rgb(0, 0, 0);
+    font-weight: 700;
   }
